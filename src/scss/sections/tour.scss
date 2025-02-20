@@ -1,0 +1,98 @@
+.tour {
+    &__content {
+        background: var(--light-grey-color);
+        margin: 60px auto;
+        padding: 60px 128px;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+
+        @include _1559-max {
+            padding: 30px 46px;
+        }
+
+        @include _767-max {
+            padding-bottom: 461px;
+        }
+
+        @include _576-max {
+            padding: 32px 20px;
+            padding-bottom: 368px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 9;
+
+        @include _767-max {
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &__desc {
+        margin: 20px 0 57px 0;
+        max-width: 399px;
+    }
+    &__btns {
+        display: flex;
+        gap: 16px;
+
+        @include _576-max {
+            gap: 12px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            button, a {
+                padding: 16px 0;
+            }
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 142px;
+        max-width: 727px;
+        &-mob {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+
+        @include _1559-max {
+            right: 0;
+        }
+
+        @include _1399-max {
+            right: -10%;
+            max-width: 612px;
+        }
+
+        @include _1199-max {
+            right: -18%;
+        }
+
+        @include _991-max {
+            max-width: 412px;
+            right: -14%;
+        }
+
+        @include _767-max {
+            right: -25%;
+            &-mob {
+                display: inline-block;
+            }
+            &-desk {
+                display: none;
+            }
+        }
+
+        @include _576-max {
+            right: -35%;
+            bottom: -12%;
+        }
+    }
+}

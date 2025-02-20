@@ -1,0 +1,149 @@
+.footer {
+    padding: 64px 0 72px;
+    background-color: var(--light-grey-color);
+    @include _767-max {
+        padding: 40px 0;
+    }
+    // .footer__wrapper
+    &__wrapper {
+    }
+
+    // .footer__top
+    &__top {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e9e9e9;
+        gap: 16px;
+
+        @include _767-max {
+            flex-direction: column;
+            gap: 40px;
+            border-bottom: none;
+        }
+    }
+
+    // footer__left
+    &__left {
+        @include flex(flex-start, center);
+
+        @include _767-max {
+            width: 100%;
+            flex-direction: column;
+            border-bottom: 1px solid #e9e9e9;
+        }
+    }
+
+    // .footer__logo
+    &__logo {
+        img {
+            width: 60px;
+        }
+    }
+
+    // .footer__nav
+    &__nav {
+        @include flex();
+        gap: 24px;
+        margin-left: 40px;
+
+        @include _767-max {
+            margin: 40px 0;
+            flex-direction: column;
+        }
+    }
+
+    // .footer__nav-link
+    &__nav-link {
+        color: var(--black-color);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        transition: 0.3s ease;
+        
+        &:hover {
+            color: var(--accent-color);
+          }
+    }
+
+    // .footer__socials
+    &__socials {
+    }
+
+    // footer__bottom
+    &__bottom {
+        @include flex(space-between, center);
+
+        @include _767-max {
+            gap: 24px;
+            flex-direction: column;
+        }
+    }
+
+    // .footer__copyright
+    &__copyright {
+        color: #7d7d7d;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    // .footer__links
+    &__links {
+        @include flex();
+        gap: 16px;
+        @include _576-max {
+            flex-direction: column;
+            gap: 24px;
+        }
+        a {
+            color: #7d7d7d;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+}
+
+.socials {
+    @include flex();
+    gap: 8px;
+
+    a, button {
+        @include flex();
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: #e8e8e8;
+        transition: all 0.5s;
+    }
+    button {
+        svg {
+            path {
+                fill: #939392;
+                transition: all 0.5s;
+
+            }
+
+            .wp-path {
+                fill: #E8E8E8;
+            }
+            
+        }
+        @media (hover:hover) {
+            &:hover {
+                background-color: var(--dark-color); 
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                    .wp-path {
+                        fill: var(--dark-color);
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+// Font
+@import "../files/fonts/font.css";
+
+// Base
+@import "./base/reset";
+@import "./base/mixins";
+@import "./base/var";
+@import "./base/libs";
+@import "./base/common";
+
+// Components
+@import "./components/preloader";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/modals";
+
+// Home Page
+@import "./sections/about";
+@import "./sections/values";
+@import "./sections/workflow";
+@import "./sections/solutions";
+@import "./sections/features";
+@import "./sections/agent-hero";
+@import "./sections/aro-portal";
+@import "./sections/tour";
